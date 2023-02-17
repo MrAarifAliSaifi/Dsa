@@ -1,0 +1,26 @@
+class Reverse{
+    public int[] revesreAnArray(int arr[]){
+        int size= arr.length-2;
+        int i= 0;
+        int j= arr[size];
+        while (i<j){
+            int temp= arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            i++;
+            j--;
+        }
+        return arr;
+    }
+}
+public class Reverse_An_Array {
+    public static void main(String[] args) {
+        int arr[]={1,2,3,4,5,6,7,8,9};
+        Reverse referense= new Reverse();
+        int []resultedArray=  referense.revesreAnArray(arr);
+        for (int ele:resultedArray){
+            System.out.print(ele);
+            System.out.print("\t");
+        }
+    }
+}
